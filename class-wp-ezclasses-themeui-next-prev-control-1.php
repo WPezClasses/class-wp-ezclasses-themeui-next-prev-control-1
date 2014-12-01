@@ -36,10 +36,10 @@ if (! class_exists('Class_WP_ezClasses_ThemeUI_Next_Prev_Control_1') ) {
 			parent::__construct();
 		}
 		
-		public function ezc_init($arr_args = NULL){
+		public function ez__construct($arr_args = NULL){
 		
 		  $arr_init_defaults = $this->init_defaults();
-		  $this->_arr_init = WP_ezMethods::ez_array_merge(array($arr_init_defaults, $arr_args));
+		  $this->_arr_init = WPezHelpers::ez_array_merge(array($arr_init_defaults, $arr_args));
 		}
 		
 		protected function init_defaults(){
@@ -65,7 +65,7 @@ if (! class_exists('Class_WP_ezClasses_ThemeUI_Next_Prev_Control_1') ) {
 		  
 		  // TODO validation
 		  
-		  if ( WP_ezMethods::array_pass($arr_args) ){
+		  if ( WPezHelpers::ez_array_pass($arr_args) ){
 		    $arr_args = array_merge($this->next_prev_defaults(), $arr_args);
 		  } else {
 		    $arr_args = $this->next_prev_defaults();	
@@ -113,7 +113,7 @@ if (! class_exists('Class_WP_ezClasses_ThemeUI_Next_Prev_Control_1') ) {
 			
 		  // TODO validation
 		  
-		  if ( WP_ezMethods::array_pass($arr_args) ){
+		  if ( WPezHelpers::ez_array_pass($arr_args) ){
 		    $arr_args = array_merge($this->next_prev_defaults(), $arr_args);
 		  } else {
 		    $arr_args = $this->next_prev_defaults();	
@@ -169,7 +169,7 @@ if (! class_exists('Class_WP_ezClasses_ThemeUI_Next_Prev_Control_1') ) {
 			 */			
 			if ( $this->_arr_init['filters'] ){
 				$arr_defaults_via_filter = apply_filters('filter_ezc_themeui_next_prev_control_1_defaults', $arr_defaults);
-				$arr_defaults = WP_ezMethods::_ez_array_merge($arr_defaults, $arr_defaults_via_filter);
+				$arr_defaults = WPezHelpers::ez_array_merge($arr_defaults, $arr_defaults_via_filter);
 			}
 			return $arr_defaults;
 		}
