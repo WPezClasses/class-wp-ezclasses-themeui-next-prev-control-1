@@ -1,4 +1,4 @@
-<?
+<?php
 /** 
  * For rendering (blog post) simple next / previous contols
  *
